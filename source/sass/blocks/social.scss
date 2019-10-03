@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  justify-content: center;
+  @include list-reset;
+  margin-right: -10px;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(#ffffff, 0.35);
+}
+
+.social__icon {
+  fill: #ffffff;
+}
+
+.social__icon:hover,
+.social__icon:focus {
+  fill: $color-dark;
+}

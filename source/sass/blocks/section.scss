@@ -1,0 +1,119 @@
+// .section {
+//   position: relative;
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+// } 
+
+// // .section__wrap {
+// //   max-width: 1920px;
+// //   margin: 0 auto;
+// // }
+
+// // .section__title {
+// //   margin: 0;
+// //   margin-bottom: 20px;
+// //   font-family: $font-accent;
+// //   font-size: 36px;
+// //   line-height: 1;
+// //   color: $color-accent-2;
+// //   text-transform: lowercase;
+// // }
+
+// // .section__links {
+// //   @include list-reset;
+// //   margin-bottom: 30px;
+// // }
+
+// // .section__links li:not(:last-of-type) {
+// //   margin-bottom: 20px;
+// // }
+
+// // .section__link {
+// //   position: relative;
+// //   display: inline-block;
+// //   font-weight: 400;
+// //   color: $color-text;
+// //   padding-left: 35px;
+
+// //   &::before {
+// //     content: "";
+// //     position: absolute;
+// //     left: 0;
+// //     top: 0;
+// //     width: 22px;
+// //     height: 22px;
+// //     border-radius: 50%;
+// //     // background-image: url('../img/check.png');
+// //     // background-size: contain;
+// //     @include sprite($check);
+// //     transition: transform 0.1s linear;
+// //   }
+// // }
+
+// // .section__link:hover {
+// //   &::before {
+// //     transform: scale(1.15);
+// //   }
+// // }
+
+// // .section__desc {
+// //   margin: 0;
+// //   // text-align: justify;
+// // }
+
+// // .section__icon {
+// //   display: block;
+// //   // float: left;
+// //   // margin-right: 10px;
+// //   margin: 0 auto;
+// //   margin-bottom: 10px;
+// // }
+
+// // .section__icon {
+// //   fill: red;
+// // }
+
+// // .section__icon circle {
+// //   fill: red;
+// // }
+
+// // @media (min-width: $tablet) {
+// //   .section {
+// //     // display: flex;
+// //     // justify-content: space-between;
+// //     padding-top: 75px;
+// //     padding-bottom: 123px;
+// //   }
+
+// //   .section--bordered:nth-of-type(2n) {
+// //     flex-direction: row-reverse;
+// //   }
+
+// //   .section__left {
+// //     max-width: 520px;
+// //   }
+// //   .section__right {
+// //     width: 405px;
+// //     text-align: center;
+// //   }
+
+// //   .section__links {
+// //     margin: 0;
+// //   }
+// // }
+
+// // @media (min-width: $desktopXS) {
+// //   .section {
+// //     padding-top: 75px;
+// //     padding-bottom: 205px;
+// //   }
+
+// //   .section__title {
+// //     font-size: 70px;
+// //     text-align: left;
+// //   }
+
+// //   .section__links li {
+// //     margin-bottom: 40px;
+// //   }
+// // }

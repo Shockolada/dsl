@@ -1,0 +1,103 @@
+// .gallery {
+//   @include list-reset;
+// }
+
+// .gallery__item {
+//   position: relative;
+//   width: 100%;
+//   margin-bottom: 15px;
+//   overflow: hidden;
+//   border-radius: 10px;
+
+// }
+
+// .gallery__link {
+//   display: block;
+//   width: 100%;
+//   height: 0;
+//   padding-top: 70%;
+//   line-height: 0;
+//   font-size: 0;
+
+//   overflow: hidden;
+//   border-radius: 10px;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: linear-gradient(390deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.001) 45%);
+  
+//     transition: opacity 0.2s linear;
+//   }
+// }
+
+// .gallery__img {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 100%;
+//   height: auto;
+//   transform-origin: center;
+
+//   transition: transform 0.2s linear;
+// }
+
+// .gallery__name {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 1;
+//   margin: 0;
+//   padding: 20px 15px;
+//   font-size: 20px;
+//   color: #ffffff;
+//   font-weight: 700;
+//   line-height: 1;
+
+//   transition: opacity 0.2s linear;
+// }
+
+// .gallery__link:hover .gallery__img {
+//   transform: scale(1.1) translate(-50%, -50%);
+// }
+
+// .gallery__link:hover::after {
+//   opacity: 0;
+// }
+
+// .gallery__link:hover .gallery__name {
+//   opacity: 0;
+// }
+  
+// .gallery__btn {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// @media (min-width: $tablet) {
+//   .gallery {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-right: -15px;
+//   }
+
+//   .gallery__item {
+//     width: calc(50% - 15px);
+//     margin-right: 15px;
+//   }
+
+
+// }
+
+// @media (min-width: $desktopXS) {
+//   .gallery__item {
+//     width: calc(100% / 3 - 15px);
+//     margin-right: 15px;
+//   }
+// }

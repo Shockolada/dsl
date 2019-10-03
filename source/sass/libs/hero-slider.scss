@@ -1,0 +1,549 @@
+/* Slider */
+.cd-hero {
+  position: relative;
+}
+
+.cd-hero__slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cd-hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+  will-change: transform;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cd-hero__slide.cd-hero__slide--selected {
+  /* this is the visible slide */
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.cd-hero__slide.cd-hero__slide--move-left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cd-hero__slide.cd-hero__slide--is-moving,
+.cd-hero__slide.cd-hero__slide--selected {
+  /* the cd-hero__slide--is-moving class is assigned to the slide which is moving outside the viewport */
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+@media only screen and (min-width: $tablet) {
+  .cd-hero__slider {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .cd-hero__slider {
+    height: 100vh;
+  }
+}
+
+/* Slide style */
+.cd-hero__slide {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-color: $color-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000000, 0.35);
+  }
+}
+
+.cd-hero__content.cd-hero__content--full-width,
+.cd-hero__content.cd-hero__content--half-width {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  /* this padding is used to align the text */
+  padding-top: 150px;
+  text-align: left;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.cd-hero__content h2,
+.cd-hero__content p,
+.cd-hero__btn,
+.cd-hero__content--img img {
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.cd-hero__content h2,
+.cd-hero__content p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: $color-text-white;
+  max-width: 450px;
+}
+
+.cd-hero__content p {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cd-hero__content h2 {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+}
+
+.cd-hero__btn {
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 23px !important;
+}
+
+
+@media only screen and (min-width: $tablet) {
+
+  .cd-hero__slide:nth-of-type(2),
+  .cd-hero__slide:nth-of-type(3),
+  .cd-hero__slide:nth-of-type(4) {
+    background-image: none;
+  }
+
+  .cd-hero__content.cd-hero__content--full-width,
+  .cd-hero__content.cd-hero__content--half-width {
+    // margin-left: 100px;
+    padding-top: 120px;
+    // text-align-last: left;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width {
+    width: 45%;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 5%;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 5%;
+    left: auto;
+  }
+
+  .cd-hero__content.cd-hero__content--img {
+    display: block;
+  }
+
+  .cd-hero__content h2,
+  .cd-hero__content p {
+    max-width: 630px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .cd-hero__content h2 {
+    margin-bottom: 25px;
+    font-size: 38px;
+    font-weight: 300;
+  }
+
+  .cd-hero__content p {
+    margin-bottom: 50px;
+  }
+
+  .cd-hero__btn {
+    width: 295px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .cd-hero__content.cd-hero__content--full-width,
+  .cd-hero__content.cd-hero__content--half-width {
+    padding-top: 145px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 115px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 115px;
+    left: auto;
+  }
+
+  .cd-hero__content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .cd-hero__content p {
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: $desktopM) {
+
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 160px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 160px;
+    left: auto;
+  }
+}
+
+@media only screen and (min-width: $desktopL) {
+
+  .cd-hero__content.cd-hero__content--full-width,
+  .cd-hero__content.cd-hero__content--half-width {
+    padding-top: 200px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 206px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 206px;
+    left: auto;
+  }
+}
+
+/* Single slide animation */
+@media only screen and (min-width: $tablet) {
+  .cd-hero__content.cd-hero__content--half-width {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+
+  .cd-hero__slide--move-left .cd-hero__content.cd-hero__content--half-width {
+    -webkit-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    transform: translateX(-40px);
+  }
+
+  .cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width {
+    /* this is the visible slide */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .cd-hero__slide--is-moving .cd-hero__content.cd-hero__content--half-width {
+    /* this is the slide moving outside the viewport
+    wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
+    -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    transition: opacity 0s 0.5s, transform 0s 0.5s;
+    transition: opacity 0s 0.5s, transform 0s 0.5s, -webkit-transform 0s 0.5s;
+  }
+
+  .cd-hero__slide--from-left.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:nth-of-type(2),
+  .cd-hero__slide--from-right.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    transition: opacity 0.4s 0.2s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+  }
+
+  .cd-hero__slide--from-left.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:first-of-type,
+  .cd-hero__slide--from-right.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+    transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+    transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+    transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+  }
+
+  .cd-hero__content--full-width h2,
+  .cd-hero__content--full-width p,
+  .cd-hero__content--full-width .cd-hero__btn {
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  .cd-hero__slide--move-left .cd-hero__content--full-width h2,
+  .cd-hero__slide--move-left .cd-hero__content--full-width p,
+  .cd-hero__slide--move-left .cd-hero__content--full-width .cd-hero__btn {
+    -webkit-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  .cd-hero__slide--selected .cd-hero__content--full-width h2,
+  .cd-hero__slide--selected .cd-hero__content--full-width p,
+  .cd-hero__slide--selected .cd-hero__content--full-width .cd-hero__btn {
+    /* this is the visible slide */
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .cd-hero__slide--is-moving .cd-hero__content--full-width h2,
+  .cd-hero__slide--is-moving .cd-hero__content--full-width p,
+  .cd-hero__slide--is-moving .cd-hero__content--full-width .cd-hero__btn {
+    /* this is the slide moving outside the viewport
+    wait for the end of the transition on the li parent before set translate to 100px/-100px */
+    -webkit-transition: -webkit-transform 0s 0.5s;
+    transition: -webkit-transform 0s 0.5s;
+    transition: transform 0s 0.5s;
+    transition: transform 0s 0.5s, -webkit-transform 0s 0.5s;
+  }
+
+  .cd-hero__slide--selected h2 {
+    -webkit-transition: -webkit-transform 0.5s 0.2s;
+    transition: -webkit-transform 0.5s 0.2s;
+    transition: transform 0.5s 0.2s;
+    transition: transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+  }
+
+  .cd-hero__slide--selected p {
+    -webkit-transition: -webkit-transform 0.5s 0.3s;
+    transition: -webkit-transform 0.5s 0.3s;
+    transition: transform 0.5s 0.3s;
+    transition: transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+  }
+
+  .cd-hero__slide--selected .cd-hero__btn {
+    -webkit-transition: background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+    transition: background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+    transition: transform 0.5s 0.4s, background-color 0.2s 0s;
+    transition: transform 0.5s 0.4s, background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+  }
+}
+
+/* Slider navigation */
+.cd-hero__nav {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  bottom: 30px;
+  z-index: 2;
+  text-align: center;
+  height: 27px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(#ffffff, 0.35);
+  }
+}
+
+.cd-hero__nav nav,
+.cd-hero__nav ul,
+.cd-hero__nav li,
+.cd-hero__nav a {
+  height: 100%;
+}
+
+.cd-hero__nav nav {
+  display: inline-block;
+  position: relative;
+}
+
+.cd-hero__nav ul {
+  display: flex;
+  margin: 0;
+  margin-right: -12px;
+  padding: 0;
+  list-style: none;
+}
+
+.cd-hero__nav ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.cd-hero__nav li {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 12px;
+  float: left;
+}
+
+.cd-hero__nav .cd-selected a {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  // color: #2c343b;
+}
+
+.cd-hero__nav .cd-selected a:hover {
+  background-color: transparent;
+}
+
+.cd-hero__nav a {
+  position: absolute;
+  display: block;
+  position: relative;
+  font-size: 0;
+  // -webkit-transition: background-color 0.2s;
+  // transition: background-color 0.2s;
+}
+
+.cd-hero__nav a::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.cd-hero__nav a:hover {
+  background-color: rgba(0, 1, 1, 0.5);
+}
+
+.cd-hero__nav li:first-of-type a::before {
+  background-position: 0 0;
+}
+
+@media only screen and (min-width: $tablet) {
+  .cd-hero__nav {
+    // height: 80px;
+    top: 0;
+    right: 15px;
+    height: 100%;
+    width: 27px;
+  }
+
+  .cd-hero__nav::after {
+    width: 1px;
+    height: 100%;
+  }
+
+  .cd-hero__nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .cd-hero__nav li {
+    margin: 0;
+  }
+
+  // .cd-hero__marker,
+  // .cd-hero__nav li {
+  //   width: 95px;
+  // }
+
+  .cd-hero__nav a {
+    // padding-top: 48px;
+    // font-size: 1.1rem;
+    // text-transform: uppercase;
+  }
+
+  // .cd-hero__nav a::before {
+  //   top: 18px;
+  // }
+}
+
+@media only screen and (min-width: $tablet) {
+  .cd-hero__nav {
+    // height: 80px;
+    top: 0;
+    right: 15px;
+    height: 100%;
+    width: 27px;
+  }
+}
+
+@media only screen and (min-width: $desktopM) {
+  .cd-hero__nav {
+    // height: 80px;
+    top: 0;
+    right: 75px;
+    height: 100%;
+    width: 27px;
+  }
+}
+
+/* Main Content */
+.cd-main-content {
+  width: 90%;
+  max-width: $tablet;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.cd-main-content p {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+/* Javascript disabled */
+.no-js .cd-hero__slide {
+  display: none;
+}
+
+.no-js .cd-hero__slide.cd-hero__slide--selected {
+  display: block;
+}
+
+.no-js .cd-hero__nav {
+  display: none;
+}
