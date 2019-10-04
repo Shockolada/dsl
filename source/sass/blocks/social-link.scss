@@ -1,0 +1,24 @@
+.social-link__list {
+  position: absolute;
+  bottom: 80px;
+  @include list-reset;
+  margin-bottom: -20px;
+}
+
+.social-link__item {
+  margin-bottom: 20px;
+}
+
+.social-link {
+  color: #ffffff;
+
+  &::before {
+    background-color: #ffffff;
+  }
+
+  &::after {
+    width: 28px;
+    height: 28px;
+    border: 1px solid transparent;
+  }
+}

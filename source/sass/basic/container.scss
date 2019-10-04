@@ -1,10 +1,19 @@
 /* CONTAINER */
 .container {
   // position: relative;
+  width: 100%;
   min-width: 320px;
   max-width: $desktopL;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container--absolute {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  // height: 100%;
 }
 
 @media (min-width: $desktopM) {

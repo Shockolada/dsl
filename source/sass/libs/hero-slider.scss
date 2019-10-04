@@ -1,6 +1,9 @@
 /* Slider */
 .cd-hero {
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-width: $max-width;
 }
 
 .cd-hero__slider {
@@ -88,7 +91,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   top: 0;
   /* this padding is used to align the text */
@@ -166,11 +169,11 @@
   }
 
   .cd-hero__content.cd-hero__content--half-width:first-of-type {
-    left: 5%;
+    left: 115px;
   }
 
   .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
-    right: 5%;
+    right: 115px;
     left: auto;
   }
 
@@ -209,15 +212,6 @@
     padding-top: 145px;
   }
 
-  .cd-hero__content.cd-hero__content--half-width:first-of-type {
-    left: 115px;
-  }
-
-  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
-    right: 115px;
-    left: auto;
-  }
-
   .cd-hero__content h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -244,7 +238,7 @@
 
   .cd-hero__content.cd-hero__content--full-width,
   .cd-hero__content.cd-hero__content--half-width {
-    padding-top: 200px;
+    padding-top: 280px;
   }
 
   .cd-hero__content.cd-hero__content--half-width:first-of-type {
@@ -256,6 +250,18 @@
     left: auto;
   }
 }
+
+@media (min-width: 1750px) {
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 446px;
+  }
+
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 446px;
+    left: auto;
+  }
+}
+
 
 /* Single slide animation */
 @media only screen and (min-width: $tablet) {
@@ -368,30 +374,12 @@
 /* Slider navigation */
 .cd-hero__nav {
   position: absolute;
-  right: 0;
+  left: 0;
   width: 100%;
   bottom: 30px;
   z-index: 2;
   text-align: center;
   height: 27px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 1px;
-    background-color: rgba(#ffffff, 0.35);
-  }
-}
-
-.cd-hero__nav nav,
-.cd-hero__nav ul,
-.cd-hero__nav li,
-.cd-hero__nav a {
-  height: 100%;
 }
 
 .cd-hero__nav nav {
@@ -419,6 +407,11 @@
   height: 27px;
   margin-right: 12px;
   float: left;
+}
+
+.cd-hero__nav a {
+  width: 100%;
+  height: 100%;
 }
 
 .cd-hero__nav .cd-selected a {
@@ -462,16 +455,10 @@
 
 @media only screen and (min-width: $tablet) {
   .cd-hero__nav {
-    // height: 80px;
-    top: 0;
-    right: 15px;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-100%);
+    left: 98%;
     width: 27px;
-  }
-
-  .cd-hero__nav::after {
-    width: 1px;
-    height: 100%;
   }
 
   .cd-hero__nav ul {
@@ -483,43 +470,26 @@
 
   .cd-hero__nav li {
     margin: 0;
-  }
-
-  // .cd-hero__marker,
-  // .cd-hero__nav li {
-  //   width: 95px;
-  // }
-
-  .cd-hero__nav a {
-    // padding-top: 48px;
-    // font-size: 1.1rem;
-    // text-transform: uppercase;
-  }
-
-  // .cd-hero__nav a::before {
-  //   top: 18px;
-  // }
-}
-
-@media only screen and (min-width: $tablet) {
-  .cd-hero__nav {
-    // height: 80px;
-    top: 0;
-    right: 15px;
-    height: 100%;
-    width: 27px;
+    margin-bottom: 12px;
   }
 }
 
-@media only screen and (min-width: $desktopM) {
-  .cd-hero__nav {
-    // height: 80px;
-    top: 0;
-    right: 75px;
-    height: 100%;
-    width: 27px;
-  }
-}
+// @media only screen and (min-width: $desktopM) {
+//   .cd-hero__nav {
+//     right: 75px;
+//   }
+
+//   .cd-hero__nav::after {
+//     top: 140px;
+//   }
+// }
+
+
+// @media (min-width: 1750px) {
+//   .cd-hero__nav {
+//     right: 300px;
+//   }
+// }
 
 /* Main Content */
 .cd-main-content {

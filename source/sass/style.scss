@@ -10,6 +10,7 @@
 @import "mixins/mixins.scss";
 
 /* BLOCKS */
+@import "blocks/link.scss";
 @import "blocks/button.scss";
 @import "blocks/hamburger-btn.scss";
 @import "blocks/close-btn.scss";
@@ -26,5 +27,6 @@
 @import "blocks/intro.scss";
 @import "blocks/social.scss";
 @import "blocks/services-link.scss";
+@import "blocks/social-link.scss";
 
 @import "blocks/page-footer.scss";
