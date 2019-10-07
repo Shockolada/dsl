@@ -1,0 +1,33 @@
+.testimonials-slider {
+  @include list-reset;
+  padding-top: 85px;
+}
+
+.testimonial {
+  padding-top: 80px;
+}
+
+.testimonial__content {
+  position: relative;
+  padding: 40px 25px;
+  padding-top: 140px;
+  border: 1px solid #eaeae8;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial__img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+
+  transform: translate(-50%, -50%);
+}
+
+// .testimonial__img

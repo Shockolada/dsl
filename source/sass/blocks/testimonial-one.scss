@@ -1,0 +1,30 @@
+.testimonial-one {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  padding: 1px 15px;
+  padding-bottom: 30px;
+  background-color: $color-dark;
+
+}
+
+.testimonial-one blockquote {
+  margin: 0;
+  padding: 0;
+  color: $color-white;
+}
+
+.testimonial-one p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.testimonial-one cite {
+  display: inline-block;
+  margin-top: 30px;
+  font-style: 20px;
+  font-style: normal;
+  font-weight: 500;
+
+  width: 100%;
+  text-align: right;
+}

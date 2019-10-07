@@ -9,6 +9,21 @@ $(document).ready(function () {
     console.log('+');
   });
 
+  var testimonialSlider = new Swiper ('.testimonials-slider', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true
+  })
+
+  // $(".service-preview__title--horizontal").lettering();
+
+  // let letter = $('.service-preview__title')
+  // wrapLetters(letter);
+
+  // function wrapLetters (el) {
+  //   el.innerHTML = el.innerHTML.replace(/(.)/g, '<span>$1</span>');
+  // }
+
   // $(window).on('scroll', function () {
   //   if ($(window).scrollTop() >= 200) {
   //     $('.page-header__wrap').addClass('scrolled');

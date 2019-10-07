@@ -3,6 +3,7 @@
 @import "basic/fonts.scss";
 @import "basic/normalize.scss";
 @import "libs/hero-slider.scss";
+@import "libs/swiper.scss";
 @import "libs/jquery.fancybox.scss";
 @import "basic/scaffolding.scss";
 @import "basic/container.scss";
@@ -29,5 +30,8 @@
 @import "blocks/services-link.scss";
 @import "blocks/social-link.scss";
 @import "blocks/service-info.scss";
+@import "blocks/service-preview.scss";
+@import "blocks/testimonial-one.scss";
+@import "blocks/testimonial-slider.scss";
 
 @import "blocks/page-footer.scss";

@@ -1,5 +1,7 @@
-@@include('./libs/jquery-3.4.1.min.js')
+@@include('./libs/jquery-3.4.1.js')
 @@include('./libs/svgxuse.min.js')
+@@include('./libs/jquery.lettering.js')
 @@include('./libs/jquery.fancybox.js')
 @@include('./libs/hero-slider.js')
+@@include('./libs/swiper.js')
 @@include('./main.js')

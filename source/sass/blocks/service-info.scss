@@ -1,9 +1,13 @@
 .service-info__wrap {
-  padding: 30px 0;
   background-color: $color-dark;
 }
 
+.service-info {
+  padding: 30px 15px;
+}
+
 .service-info__title {
+  margin-bottom: 50px;
   color: $color-text-white;
 }
 
@@ -15,17 +19,22 @@
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   margin: 0;
+  margin-bottom: 15px;
   padding: 10px 0;
   padding-right: 25px;
+  padding-left: 55px;
   font-size: 20px;
+  line-height: 1;
   text-transform: uppercase;
-  color: $color-text-white;
+  color: #82888d;
   font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  transition: color 0.2s linear;
 
   &::after {
     content: "";
@@ -49,8 +58,13 @@
 }
 
 .service-link__icon {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
   margin-right: 20px;
-  fill: $color-white;
+  fill: #82888d;
+
+  transition: fill 0.2s linear;
 }
 
 .service-info__text {
@@ -64,6 +78,7 @@
 
 .service-info__text h3 {
   display: none;
+  margin: 0;
   font-size: 25px;
 }
 
@@ -81,35 +96,68 @@
   margin-top: 25px;
 }
 
+.service-info__name:hover,
+.service-info__name.active {
+  color: $color-white;
+}
+
+.service-info__name:hover .service-link__icon,
+.service-info__name.active .service-link__icon {
+  fill: $color-white;
+}
+
 @media (min-width: $tablet) {
+  .service-info__title {
+    margin-bottom: 70px;
+  }
+
+  .service-info__name {
+    margin-bottom: 15px;
+    font-size: 25px;
+
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $desktopXS) {
   .service-info__wrap {
     position: relative;
-    padding: 50px 0;
-
+    background-color: $color-white;
+    
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       bottom: 0;
       width: 50%;
-      background-color: $color-white;
+      background-color: $color-dark;
+    }
+  }
+  
+  .service-info {
+    position: relative;
+    padding: 60px 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%) rotate(45deg);
+      width: 40px;
+      height: 40px;
+      background-color: $color-dark;
     }
   }
 
-  .service-info {
-    position: relative;
-
-    &::before {
-
-    }
+  .service-info__title {
+    margin-bottom: 80px;
   }
 
   .service-info__name {
-    margin-bottom: 10px;
-    padding: 10px 0;
-    // padding-right: 25px;
-    font-size: 25px;
+    display: inline-block;
 
     &::before,
     &::after {
@@ -129,13 +177,42 @@
     }
   }
 
+  .service-info__text {
+    display: block;
+    position: absolute;
+    top: 120px;
+    bottom: 0;
+    left: 50%;
+    right: 15px;
+    // z-index: -1;
+    // transform: translateX(-100%);
 
-}
-
-@media (min-width: $desktopXS) {
-  .service-info__wrap {
-    padding: 60px 0;
+    width: 50%;
+    margin: 0;
+    padding-right: 60px;
+    padding-left: 80px;
   }
 
+  .service-info__text h3 {
+    display: block;
+    margin: 30px 0;
+  }
 
+  .service-info__btn {
+    margin-top: 50px;
+  }
+  
+  .service-link__icon--big {
+    display: block;
+  }
+}
+
+@media (min-width: $desktopM) {
+  .service-info {
+    padding: 60px;
+  }
+
+  .service-info__text {
+    padding-left: 120px;
+  }
 }
