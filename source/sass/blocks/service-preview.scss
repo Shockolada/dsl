@@ -80,7 +80,7 @@
   opacity: 1;
   overflow: hidden;
 
-  transform: translateX(-80px);
+  transform: translateY(-100%);
 
   transition: transform 0.3s linear,;
 }
@@ -121,7 +121,7 @@
 
 .service-preview__link:hover .service-preview__title--horizontal,
 .service-preview__link:focus .service-preview__title--horizontal {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -160,7 +160,7 @@
     // }
   }
 
-  
+
 }
 
 @media (min-width: $desktop) {

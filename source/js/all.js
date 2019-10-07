@@ -3,5 +3,5 @@
 @@include('./libs/jquery.lettering.js')
 @@include('./libs/jquery.fancybox.js')
 @@include('./libs/hero-slider.js')
-@@include('./libs/swiper.js')
+// @@include('./libs/swiper.js')
 @@include('./main.js')

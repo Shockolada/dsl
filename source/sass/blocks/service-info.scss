@@ -21,8 +21,9 @@
   display: flex;
   align-items: baseline;
   margin: 0;
-  margin-bottom: 15px;
-  padding: 10px 0;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
   padding-right: 25px;
   padding-left: 55px;
   font-size: 20px;
@@ -113,6 +114,7 @@
 
   .service-info__name {
     margin-bottom: 15px;
+    margin-left: 50px;
     font-size: 25px;
 
     cursor: pointer;
@@ -123,7 +125,7 @@
   .service-info__wrap {
     position: relative;
     background-color: $color-white;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -134,7 +136,7 @@
       background-color: $color-dark;
     }
   }
-  
+
   .service-info {
     position: relative;
     padding: 60px 15px;
@@ -158,6 +160,7 @@
 
   .service-info__name {
     display: inline-block;
+    margin-left: 100px;
 
     &::before,
     &::after {
@@ -201,7 +204,7 @@
   .service-info__btn {
     margin-top: 50px;
   }
-  
+
   .service-link__icon--big {
     display: block;
   }
@@ -214,5 +217,9 @@
 
   .service-info__text {
     padding-left: 120px;
+  }
+
+  .service-info__name {
+    margin-left: 160px;
   }
 }

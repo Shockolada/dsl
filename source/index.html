@@ -27,6 +27,44 @@
   ================================================== -->
   <script src="js/main.js"></script>
 
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      speed: 600,
+      // parallax: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 4200
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        900: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        }
+      }
+    });
+
+  </script>
+
+  <script>
+  var swiper = new Swiper(".hero-slider", {
+      speed: 600,
+      parallax: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 5000
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+
+    });
+  </script>
+
 </body>
 
 </html>

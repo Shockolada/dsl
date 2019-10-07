@@ -1,0 +1,9 @@
+.testimonials__wrap {
+
+}
+
+@media (min-width: $tablet) {
+  .testimonials__wrap {
+    display: flex;
+  }
+}

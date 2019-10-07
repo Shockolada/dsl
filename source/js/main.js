@@ -9,13 +9,11 @@ $(document).ready(function () {
     console.log('+');
   });
 
-  var testimonialSlider = new Swiper ('.testimonials-slider', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true
-  })
 
-  // $(".service-preview__title--horizontal").lettering();
+
+
+
+  $(".service-preview__title--horizontal").lettering();
 
   // let letter = $('.service-preview__title')
   // wrapLetters(letter);

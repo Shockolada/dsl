@@ -214,6 +214,10 @@
   bottom: 10px;
   left: 0;
   width: 100%;
+  height: 35px;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
@@ -243,12 +247,41 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
   display: inline-block;
   border-radius: 100%;
-  background: #000;
-  opacity: 0.2;
+  background: transparent;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+  background: #3f4850;
+  transition: background-color 0.2s linear;
+}
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+  border: 1px solid transparent;
+  transition: border-color 0.2s linear;
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -262,9 +295,15 @@ button.swiper-pagination-bullet {
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
 }
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+.swiper-pagination-bullet:hover::before,
+.swiper-pagination-bullet:focus::before,
+.swiper-pagination-bullet-active::before {
+  background: #f1cb3f;
+}
+.swiper-pagination-bullet:hover::after,
+.swiper-pagination-bullet:focus::after,
+.swiper-pagination-bullet-active::after {
+  border: 1px solid #f1cb3f;
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
@@ -285,7 +324,7 @@ button.swiper-pagination-bullet {
   transition: 200ms transform, 200ms top;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 4px;
+  margin: 5px;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
@@ -525,3 +564,24 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+
+
+/* HERO SLIDER STYLES */
+.hero-slider {
+  height: 100%;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-slider h2 {
+  font-weight: 500;
+}
+
+.hero-slider .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 20px;
+}
+
+
+// .hero-slider .button {
+//   display: block;
+// }
