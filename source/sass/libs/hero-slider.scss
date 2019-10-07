@@ -251,18 +251,6 @@
   }
 }
 
-@media (min-width: 1750px) {
-  .cd-hero__content.cd-hero__content--half-width:first-of-type {
-    left: 446px;
-  }
-
-  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
-    right: 446px;
-    left: auto;
-  }
-}
-
-
 /* Single slide animation */
 @media only screen and (min-width: $tablet) {
   .cd-hero__content.cd-hero__content--half-width {
@@ -457,7 +445,7 @@
   .cd-hero__nav {
     top: 50%;
     transform: translateY(-100%);
-    left: 98%;
+    left: calc(100% - 90px);
     width: 27px;
   }
 

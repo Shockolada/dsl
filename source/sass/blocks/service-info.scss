@@ -1,0 +1,141 @@
+.service-info__wrap {
+  padding: 30px 0;
+  background-color: $color-dark;
+}
+
+.service-info__title {
+  color: $color-text-white;
+}
+
+.service-info__list {
+  @include list-reset;
+}
+
+.service-info__name {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: 10px 0;
+  padding-right: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $color-text-white;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid $color-white;
+    right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-60%, 20%) rotate(45deg);
+    width: 40px;
+    height: 40px;
+    background-color: $color-dark;
+  }
+}
+
+.service-link__icon {
+  margin-right: 20px;
+  fill: $color-white;
+}
+
+.service-info__text {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  padding: 30px 15px;
+  background-color: $color-white;
+
+  display: none;
+}
+
+.service-info__text h3 {
+  display: none;
+  font-size: 25px;
+}
+
+.service-link__icon--big {
+  display: none;
+  fill: $color-dark;
+}
+
+.service-info__text p {
+  margin: 0;
+}
+
+.service-info__btn {
+  min-width: 250px;
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet) {
+  .service-info__wrap {
+    position: relative;
+    padding: 50px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: $color-white;
+    }
+  }
+
+  .service-info {
+    position: relative;
+
+    &::before {
+
+    }
+  }
+
+  .service-info__name {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    // padding-right: 25px;
+    font-size: 25px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-60%, 20%) rotate(45deg);
+      width: 40px;
+      height: 40px;
+      background-color: $color-dark;
+    }
+  }
+
+
+}
+
+@media (min-width: $desktopXS) {
+  .service-info__wrap {
+    padding: 60px 0;
+  }
+
+
+}

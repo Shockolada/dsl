@@ -1,5 +1,5 @@
 .page-header__wrap {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 8;
@@ -63,10 +63,9 @@
   }
 }
 
-// .page-header__wrap.active {
-//   background: rgba(250, 250, 250, 0.8) url(../img/header-bg-2.png) no-repeat top;
-//   background-size: cover;
-// }
+.page-header__wrap.scrolled {
+  position: fixed;
+}
 
 @media (min-width: $desktopXS) {
   .page-header__wrap {
