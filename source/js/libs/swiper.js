@@ -1,14 +1,13 @@
-/**
- * Swiper 5.0.4
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://swiperjs.com
- *
- * Copyright 2014-2019 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: September 30, 2019
- */
+ // Swiper 5.0.4
+ // Most modern mobile touch slider and framework with hardware accelerated transitions
+ // http://swiperjs.com
+ //
+ // Copyright 2014-2019 Vladimir Kharlampidi
+ //
+ // Released under the MIT License
+ //
+ // Released on: September 30, 2019
+
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :

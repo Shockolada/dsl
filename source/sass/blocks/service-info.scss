@@ -194,6 +194,9 @@
     margin: 0;
     padding-right: 60px;
     padding-left: 80px;
+
+    opacity: 0;
+    transition: opacity 0.2s linear;
   }
 
   .service-info__text h3 {
@@ -207,6 +210,10 @@
 
   .service-link__icon--big {
     display: block;
+  }
+
+  .service-info__text.active {
+    opacity: 1;
   }
 }
 

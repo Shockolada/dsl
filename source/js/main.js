@@ -9,7 +9,16 @@ $(document).ready(function () {
     console.log('+');
   });
 
-
+  $('.service-info__name').click(function () {
+    $('.service-info__name').removeClass('active');
+    $(this).addClass('active');
+    if ($(window).width() < 750) {
+      $('.service-info__text').stop().slideUp(200).removeClass('active');
+      $(this).next('.service-info__text').stop().slideDown(200).addClass('active');
+    }
+    $('.service-info__text').removeClass('active');
+    $(this).next('.service-info__text').addClass('active');
+  });
 
 
 
