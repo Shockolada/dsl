@@ -1,28 +1,34 @@
 $(document).ready(function () {
   // $(document).ready(function () {
+    console.log(top);
+
 
   $('.menu__btn').click(function () {
     event.preventDefault();
     $('.menu').toggleClass('active');
-    // $('.menu').slideToggle(200);
+    $('.menu').slideToggle(200);
     $(this).toggleClass('active');
-    console.log('+');
+
+    let top = $('.page-header__wrap').height();
+    // $('.menu').css('top','[top]px');
   });
 
   $('.service-info__name').click(function () {
     $('.service-info__name').removeClass('active');
     $(this).addClass('active');
-    if ($(window).width() < 750) {
+    if ($(window).width() < 1023) {
       $('.service-info__text').stop().slideUp(200).removeClass('active');
-      $(this).next('.service-info__text').stop().slideDown(200).addClass('active');
+      $(this).next('.service-info__text').toggleClass('active').stop().slideToggle(200);
     }
     $('.service-info__text').removeClass('active');
     $(this).next('.service-info__text').addClass('active');
   });
 
-
+  new WOW().init();
 
   $(".service-preview__title--horizontal").lettering();
+
+  
 
   // let letter = $('.service-preview__title')
   // wrapLetters(letter);

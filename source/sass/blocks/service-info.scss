@@ -36,6 +36,7 @@
   text-overflow: ellipsis;
 
   transition: color 0.2s linear;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -61,7 +62,7 @@
 .service-link__icon {
   position: absolute;
   left: 0;
-  bottom: 12px;
+  bottom: 6px;
   margin-right: 20px;
   fill: #82888d;
 

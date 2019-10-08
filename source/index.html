@@ -50,7 +50,7 @@
   </script>
 
   <script>
-  var swiper = new Swiper(".hero-slider", {
+    var swiper = new Swiper(".hero-slider", {
       speed: 600,
       parallax: true,
       slidesPerView: 1,
@@ -62,6 +62,19 @@
         clickable: true
       },
 
+    });
+
+  </script>
+
+  <script>
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() >= 200) {
+        $('.page-header__wrap').removeClass('page-header--main');
+        $('.page-header__wrap').addClass('scrolled');
+      } else {
+        $('.page-header__wrap').addClass('page-header--main');
+        $('.page-header__wrap').removeClass('scrolled');
+      }
     });
   </script>
 
