@@ -4,23 +4,22 @@
   max-width: $max-width;
   height: 100vh;
   margin: 0 auto;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50%;
-  //   bottom: 0;
-  //   transform: translateX(-50%);
-  //   width: 100vw;
-    // background-color: $color-dark;
-  // }
 }
 
 .intro {
   position: relative;
   z-index: 1;
 }
+
+// .intro__content-container {
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 100%;
+//   max-width: $desktopL;
+//   margin: 0 auto;
+// }
 
 
 @media (min-width: $desktopXS) {

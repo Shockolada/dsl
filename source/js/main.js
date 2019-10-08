@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('.menu').slideToggle(200);
     $(this).toggleClass('active');
 
-    let top = $('.page-header__wrap').height();
+    // let top = $('.page-header__wrap').height();
     // $('.menu').css('top','[top]px');
   });
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
   $(".service-preview__title--horizontal").lettering();
 
-  
+
 
   // let letter = $('.service-preview__title')
   // wrapLetters(letter);

@@ -1,7 +1,10 @@
 .social-link__list {
   position: absolute;
   bottom: 80px;
+  z-index: 1;
   @include list-reset;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: -20px;
 }
 
@@ -20,5 +23,31 @@
     width: 28px;
     height: 28px;
     border: 1px solid transparent;
+  }
+}
+
+@media (min-width: $desktopXS) {
+  .social-link__list {
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .social-link__list {
+    left: 45px;
+  }
+}
+
+@media (min-width: $desktopL) {
+  .social-link__list {
+    left: calc(50% - 670px);
+  }
+}
+
+
+
+@media (max-height: 650px) and (orientation: portrait) {
+  .social-link__list {
+    display: none;
   }
 }

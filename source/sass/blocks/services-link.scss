@@ -1,4 +1,5 @@
 .services-link__list {
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -56,28 +57,36 @@
   .services-link__list {
     position: absolute;
     top: 150px;
-    left: 69.1%;
+    left: unset;
+    right: 100px;
     display: flex;
   }
 }
 
-@media (min-width: $desktopM) {
+@media (min-width: 1280px) {
   .services-link__list {
-    right: 135px;
+    left: unset;
+    // right: calc(50% - 600px);
   }
 }
 
 @media (min-width: $desktopL) {
   .services-link__list {
-    top: 220px;
-    // right: 135px;
-    max-width: 350px;
-    padding: 50px;
+    right: calc(50% - 600px);
   }
 }
 
-@media (min-width: 1750px) {
-  .services-link__list {
-    right: 375px;
-  }
-}
+// @media (min-width: $desktopL) {
+//   .services-link__list {
+//     top: 220px;
+//     // right: 135px;
+//     max-width: 350px;
+//     padding: 50px;
+//   }
+// }
+
+// @media (min-width: 1750px) {
+//   .services-link__list {
+//     right: 375px;
+//   }
+// }
