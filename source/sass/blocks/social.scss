@@ -10,6 +10,7 @@
 }
 
 .social__link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,13 +18,24 @@
   height: 38px;
   border-radius: 50%;
   background-color: rgba(#ffffff, 0.35);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+  }
 }
 
 .social__icon {
   fill: #ffffff;
+  transition: fill 0.2s linear;
 }
 
-.social__icon:hover,
-.social__icon:focus {
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
   fill: $color-dark;
 }

@@ -28,54 +28,61 @@
   <script src="js/main.js"></script>
 
   <script>
-    var swiper = new Swiper(".swiper-container", {
-      speed: 600,
-      // parallax: true,
-      slidesPerView: 1,
-      autoplay: {
-        delay: 4200
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      breakpoints: {
-        900: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+    $(document).ready(function () {
+      var swiper = new Swiper(".swiper-container", {
+        speed: 600,
+        // parallax: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 4200
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          900: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          }
         }
-      }
+      });
     });
 
   </script>
 
   <script>
-    var swiper = new Swiper(".hero-slider", {
-      speed: 600,
-      parallax: true,
-      slidesPerView: 1,
-      autoplay: {
-        delay: 5000
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
+    $(document).ready(function () {
 
+      var swiper = new Swiper(".hero-slider", {
+        speed: 600,
+        parallax: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 5000
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+
+      });
     });
 
   </script>
 
   <script>
-    $(window).on('scroll', function () {
-      if ($(window).scrollTop() >= 200) {
-        $('.page-header__wrap').removeClass('page-header--main');
-        $('.page-header__wrap').addClass('scrolled');
-      } else {
-        $('.page-header__wrap').addClass('page-header--main');
-        $('.page-header__wrap').removeClass('scrolled');
-      }
+    $(document).ready(function () {
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() >= 200) {
+          $('.page-header__wrap').removeClass('index-page');
+        } else {
+          $('.page-header__wrap').addClass('index-page');
+        }
+      });
     });
+
   </script>
 
 </body>

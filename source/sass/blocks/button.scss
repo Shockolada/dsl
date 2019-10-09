@@ -9,6 +9,7 @@
   font-size: 18px;
   text-align: center;
   text-decoration: none;
+  text-transform: lowercase;
   color: $color-text-white;
   background-color: $color-accent;
   overflow: hidden;
@@ -16,38 +17,19 @@
   cursor: pointer;
 
   transition: background-color 0.2s linear;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   z-index: -1;
-  //   width: 0;
-
-  //   background-color: $color-dark;
-
-  //   transition: all 0.2s linear;
-  // }
 }
 
 .button:hover,
 .button:focus {
   background-color: $color-dark;
-
-  // &::before {
-  //   left: 0;
-  //   width: 100%;
-  // }
 }
 
 .button--dark {
   background-color: $color-dark;
 
-  // &:hover {
-  //   background-color: $color-accent;
-  // }
+  &:hover {
+    background-color: $color-accent;
+  }
 }
 
 .button--transparent {

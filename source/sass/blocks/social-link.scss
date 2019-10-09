@@ -14,15 +14,18 @@
 
 .social-link {
   color: #ffffff;
+  transition: color 0.2s linear;
 
   &::before {
     background-color: #ffffff;
+    transition: background-color 0.2s linear;
   }
 
   &::after {
     width: 28px;
     height: 28px;
     border: 1px solid transparent;
+    transition: border 0.2s linear;
   }
 }
 
@@ -38,11 +41,11 @@
   }
 }
 
-@media (min-width: $desktopL) {
-  .social-link__list {
-    left: calc(50% - 670px);
-  }
-}
+// @media (min-width: $desktopL) {
+//   .social-link__list {
+//     left: calc(50% - 670px);
+//   }
+// }
 
 
 

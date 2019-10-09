@@ -37,11 +37,11 @@
   margin-bottom: 30px;
 }
 
-.page-header--main {
+.page-header__wrap.index-page {
   background-color: transparent;
 }
 
-.page-header--main .page-header__logo img {
+.page-header__wrap.index-page .page-header__logo img {
   transition: opacity 0.5s linear;
 }
 
@@ -52,16 +52,21 @@
   opacity: 0;
 }
 
-.page-header--main .page-header__logo-img--white {
+.page-header__wrap.index-page .main-nav__link:hover,
+.page-header__wrap.index-page .main-nav__link:focus,
+.page-header__wrap.index-page .main-nav__link.active {
+  color: $color-accent;
+}
+
+.page-header__wrap.index-page .page-header__logo-img--white {
   opacity: 1;
 }
 
-.page-header--main .page-header__logo-img--color {
+.page-header__wrap.index-page .page-header__logo-img--color {
   opacity: 0;
 }
 
-
-.page-header--main .menu__btn {
+.page-header__wrap.index-page .menu__btn {
 
   &::before,
   &::after,
@@ -72,7 +77,21 @@
 
 .page-header__wrap.scrolled {
   padding: 10px 0;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
 }
+
+
+// .Bg {
+//   background-color: rgb(255, 255, 255);
+//   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+//   position: absolute;
+//   left: 0px;
+//   top: 1080px;
+//   width: 1920px;
+//   height: 140px;
+//   z-index: 286;
+// }
+
 
 @media (min-width: $desktopXS) {
   .page-header__wrap {
@@ -84,17 +103,17 @@
     margin-bottom: 0;
   }
 
-  .page-header--main .main-nav__link {
+  .page-header__wrap.index-page .main-nav__link {
     color: $color-text-white;
   }
-  
-  .page-header--main .page-header__btn {
+
+  .page-header__wrap.index-page .page-header__btn {
     background-color: $color-accent;
   }
-  
-  .page-header--main .page-header__btn:hover {
+
+  .page-header__wrap.index-page .page-header__btn:hover {
     background-color: $color-dark;
-  }  
+  }
 }
 
 @media (min-width: $desktopL) {

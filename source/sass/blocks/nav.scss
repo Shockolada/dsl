@@ -19,12 +19,13 @@
   font-size: 20px;
 
   cursor: pointer;
+  transition: color 0.2s linear;
 }
 
 .nav__link:hover,
 .nav__link:focus,
 .nav__link.active {
-  color: $color-text;
+  color: $color-accent;
 }
 
 @media (min-width: $tablet) {

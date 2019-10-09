@@ -1,0 +1,32 @@
+.scroll-down-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 50px;
+  height: 40px;
+}
+
+.scroll-down-button__arrow {
+  position: absolute;
+  fill: $color-accent;
+
+  transition: fill 0.4s linear;
+}
+
+.scroll-down-button__arrow--top {
+  left: 0;
+  top: 0;
+  opacity: 0.35;
+}
+
+.scroll-down-button__arrow--bottom {
+  bottom: 0;
+  opacity: 1;
+}
+
+.scroll-down-button:hover .scroll-down-button__arrow,
+.scroll-down-button:focus .scroll-down-button__arrow {
+  fill: #ffffff;
+}
