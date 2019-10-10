@@ -1,15 +1,3 @@
 .section {
   margin-bottom: 30px;
 }
-
-@media (min-width: $tablet) {
-  .section {
-    margin-bottom: 50px;
-  }
-}
-
-@media (min-width: $desktopXS) {
-  .section {
-    margin-bottom: 90px;
-  }
-}

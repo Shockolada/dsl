@@ -51,4 +51,26 @@ $(document).ready(function () {
       scrollTop: top
     }, 200);
   });
+
+  $(document).ready(function () {
+    var swiper = new Swiper(".testimonial-slider", {
+      speed: 600,
+      // parallax: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 4200
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        900: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        }
+      }
+    });
+  });
+
 });
