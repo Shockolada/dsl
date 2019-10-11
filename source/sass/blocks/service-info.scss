@@ -4,6 +4,7 @@
 
 .service-info {
   padding: 30px 15px;
+  padding-top: 1px;
 }
 
 .service-info__title {
@@ -38,25 +39,25 @@
   transition: color 0.2s linear;
   cursor: pointer;
 
-  &::after {
-    content: "";
-    position: absolute;
-    border: 10px solid transparent;
-    border-top: 10px solid $color-white;
-    right: 0;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   border: 10px solid transparent;
+  //   border-top: 10px solid $color-white;
+  //   right: 0;
+  // }
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: -1;
-    transform: translate(-60%, 20%) rotate(45deg);
-    width: 40px;
-    height: 40px;
-    background-color: $color-dark;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 50%;
+  //   z-index: -1;
+  //   transform: translate(-60%, 20%) rotate(45deg);
+  //   width: 40px;
+  //   height: 40px;
+  //   background-color: $color-dark;
+  // }
 }
 
 .service-link__icon {
@@ -64,6 +65,17 @@
   left: 0;
   bottom: 6px;
   margin-right: 20px;
+  fill: #82888d;
+
+  transition: fill 0.2s linear;
+}
+
+.service-link__arrow {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 20px;
+  height: 20px;
   fill: #82888d;
 
   transition: fill 0.2s linear;
@@ -104,7 +116,9 @@
 }
 
 .service-info__name:hover .service-link__icon,
-.service-info__name.active .service-link__icon {
+.service-info__name.active .service-link__icon,
+.service-info__name:hover .service-link__arrow,
+.service-info__name.active .service-link__arrow {
   fill: $color-white;
 }
 
@@ -138,9 +152,14 @@
     }
   }
 
+  .service-info__list {
+    width: 50%;
+  }
+
   .service-info {
     position: relative;
     padding: 60px 15px;
+    padding-top: 1px;
 
     &::before {
       content: "";
@@ -179,6 +198,10 @@
       height: 40px;
       background-color: $color-dark;
     }
+  }
+
+  .service-link__arrow {
+    display: none;
   }
 
   .service-info__text {
@@ -221,6 +244,7 @@
 @media (min-width: $desktopM) {
   .service-info {
     padding: 60px;
+    padding-top: 1px;
   }
 
   .service-info__text {

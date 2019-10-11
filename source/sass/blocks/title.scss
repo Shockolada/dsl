@@ -35,16 +35,20 @@
   }
 
   .title--small {
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 30px;
   }
 }
 
-@media (min-width: $desktopM) {
+@media (min-width: $desktopXS) {
   .title {
     font-size: 50px;
   }
 
   .title--small {
+    margin-top: 60px;
+    margin-bottom: 80px;
     font-size: 35px;
   }
 }

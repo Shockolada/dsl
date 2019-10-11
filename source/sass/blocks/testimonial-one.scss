@@ -66,12 +66,12 @@
 
   .testimonial-one__title {
     margin-left: calc(64%);
+    margin-bottom: 30px;
   }
 
   .testimonial-one blockquote {
     max-width: 520px;
     margin: 0 30px;
-    margin-top: 50px;
     color: $color-white;
   }
 
@@ -84,5 +84,9 @@
   .testimonial-one {
     width: calc(50% - 30px);
     margin-right: 30px;
+  }
+
+  .testimonial-one__title {
+    margin-bottom: 40px;
   }
 }

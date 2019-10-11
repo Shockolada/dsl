@@ -100,7 +100,7 @@
   transform: translateX(120%);
   visibility: hidden;
   // opacity: 0;
-  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, background-color 0.2s linear;
 }
 
 .service-preview__link:hover,

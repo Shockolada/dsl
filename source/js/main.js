@@ -3,6 +3,24 @@ $(document).ready(function () {
   console.log(top);
 
 
+  $('.open-modal-quote').click(function () {
+    event.preventDefault();
+    $('.modal-quote').fadeIn(200);
+    $('.overlay').fadeIn(200);
+  });
+
+  $('.overlay').click(function () {
+    event.preventDefault();
+    $(this).fadeOut(200);
+    $('.modal').fadeOut(200);
+  });
+
+  $('.modal__close-btn').click(function () {
+    event.preventDefault();
+    $('.overlay').fadeOut(200);
+    $('.modal').fadeOut(200);
+  });
+
   $('.menu__btn').click(function () {
     event.preventDefault();
     $('.menu').toggleClass('active');
