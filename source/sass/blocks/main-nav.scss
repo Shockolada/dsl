@@ -19,8 +19,10 @@
   text-decoration: none;
   text-align: center;
   color: $color-text;
+  // color: $color-text;
   white-space: nowrap;
   font-size: 20px;
+  // text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
   transition: color 0.2s linear;
@@ -30,6 +32,8 @@
 .main-nav__link:focus,
 .main-nav__link.active {
   color: $color-accent;
+
+  // color: $color-text;
 }
 
 .main-nav__btn {

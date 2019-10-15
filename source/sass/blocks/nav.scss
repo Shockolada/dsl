@@ -14,7 +14,7 @@
   padding: 8px;
   text-decoration: none;
   text-align: center;
-  color: $color-text-white;
+  color: $color-text;
   white-space: nowrap;
   font-size: 20px;
 
@@ -25,7 +25,7 @@
 .nav__link:hover,
 .nav__link:focus,
 .nav__link.active {
-  color: $color-accent;
+  color: $color-text-white;
 }
 
 @media (min-width: $tablet) {

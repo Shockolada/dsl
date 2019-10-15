@@ -33,7 +33,7 @@
 
 .page-header__btn {
   width: 100%;
-  min-width: 210px;
+  min-width: 230px;
   margin-bottom: 30px;
 }
 
@@ -105,16 +105,16 @@
 
 @media (min-width: $desktopL) {
   .page-header__wrap {
-    padding: 20px 0;
+    padding: 15px 0;
   }
 
   .page-header {
-    height: 100px;
+    height: 90px;
   }
 
   .page-header__logo {
-    display: inline-block;
-    width: 146px;
-    font-size: 0;
+    // display: inline-block;
+    // width: 146px;
+    // font-size: 0;
   }
 }

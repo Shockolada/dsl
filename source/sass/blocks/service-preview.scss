@@ -27,7 +27,7 @@
     content: "0" counter(section);
     color: $color-white;
     font-size: 120px;
-    line-height: 0.8;
+    line-height: 1;
     transition: opacity 0.1s linear;
   }
 
@@ -93,7 +93,7 @@
 
 .service-preview__btn {
   position: absolute;
-  min-width: 60%;
+  min-width: 55%;
   bottom: 25px;
   right: 30px;
 
