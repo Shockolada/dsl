@@ -1,29 +1,25 @@
 $(document).ready(function () {
-  // $(document).ready(function () {
-  console.log(top);
-
-
   $('.open-modal-quote').click(function () {
     event.preventDefault();
-    $('.modal-quote').fadeIn(200);
+    $('.modal-quote').addClass('active');
     $('.overlay').fadeIn(200);
   });
 
   $('.overlay').click(function () {
     event.preventDefault();
     $(this).fadeOut(200);
-    $('.modal').fadeOut(200);
+    $('.modal').removeClass('active');
   });
 
   $('.modal__close-btn').click(function () {
     event.preventDefault();
     $('.overlay').fadeOut(200);
-    $('.modal').fadeOut(200);
+    $('.modal').removeClass('active');
   });
 
   $('.menu__btn').click(function () {
     event.preventDefault();
-    $('.menu').toggleClass('active');
+    // $('.menu').toggleClass('active');
     $('.menu').slideToggle(200);
     $(this).toggleClass('active');
   });
@@ -32,7 +28,7 @@ $(document).ready(function () {
     $('.service-info__name').removeClass('active');
     $(this).addClass('active');
 
-    if ($(window).width() < 1023) {
+    if ($(window).width() < 940) {
       $('.service-info__text').stop().slideUp(200).removeClass('active');
       $(this).next('.service-info__text').toggleClass('active').stop().slideToggle(200);
     }
@@ -41,7 +37,7 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    if ($(window).width() > 1023) {
+    if ($(window).width() >= 940) {
       $('.service-info__text').css('display', 'block');
     } else {
       $('.service-info__text').css('display', 'none');

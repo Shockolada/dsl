@@ -3,13 +3,45 @@
 }
 
 .slider-counter__current {
-  font-size: 50px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 500;
 }
 
 .slider-counter__all {
   margin-top: 15px;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1;
+}
+
+@media (min-width: $tablet) {
+  .slider-counter__current {
+    font-size: 50px;
+  }
+
+  .slider-counter__all {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $desktopXS) {
+  .slider-counter__current {
+    font-size: 35px;
+  }
+
+  .slider-counter__all {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktopM) {
+  .slider-counter__current {
+    font-size: 50px;
+  }
+
+  .slider-counter__all {
+    margin-top: 15px;
+    font-size: 24px;
+  }
 }

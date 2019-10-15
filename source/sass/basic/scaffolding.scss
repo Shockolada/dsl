@@ -17,6 +17,9 @@ body {
   font-size: 18px;
   font-family: $font;
   font-weight: 300;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .page-content {

@@ -32,7 +32,7 @@
   <script>
     $(document).ready(function () {
 
-      var swiper = new Swiper(".hero-slider", {
+      var heroSlider = new Swiper(".hero-slider", {
         speed: 600,
         parallax: true,
         slidesPerView: 1,
@@ -43,6 +43,20 @@
           el: ".swiper-pagination",
           clickable: true
         },
+      });
+
+      const heroSlideCounterCurrent = $('.hero-slider .slider-counter__current');
+      const heroSlideCounterAll = $('.hero-slider .slider-counter__all');
+
+      let heroSlideAllEl = ($('.hero-slider .swiper-slide')).length;
+
+      heroSlideCounterAll.text('/0' + heroSlideAllEl);
+
+      heroSlider.on('slideChange', function () {
+        setTimeout(() => {
+          let heroSlideCurrentEl = (($('.hero-slider .swiper-slide-active')).index() + 1);
+          heroSlideCounterCurrent.text('0' + heroSlideCurrentEl);
+        }, 50);
 
       });
     });
@@ -60,7 +74,6 @@
         }
       });
     });
-
   </script>
 
 </body>

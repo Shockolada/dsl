@@ -735,7 +735,7 @@ button.swiper-pagination-bullet {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: $desktopL;
+    max-width: $desktop;
     margin: 0 auto;
     padding: 0 15px;
 
@@ -855,12 +855,12 @@ button.swiper-pagination-bullet {
       padding-top: 130px;
     }
 
-    .swiper-pagination {}
-
     .swiper-pagination-bullets {
       left: unset;
       right: 0;
       top: 300px;
+      top: 50%;
+      transform: translate(-50%, -50%);
       bottom: unset;
       display: flex;
       flex-direction: column;
@@ -869,13 +869,12 @@ button.swiper-pagination-bullet {
       padding: 0;
 
       &::before {
-        top: calc(100% + 200px) !important;
+        top: calc(50% + 100px) !important;
         left: 50%;
         right: unset;
         transform: translateY(-50%);
         width: 1px;
         height: 100vh;
-
       }
     }
 
@@ -886,7 +885,7 @@ button.swiper-pagination-bullet {
     }
 
     .slider-counter {
-      display: none;
+      top: 95px;
     }
 
     .scroll-down-button {
@@ -895,40 +894,56 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: $desktopS) {
   .hero-slider {
     .swiper-slide__container {
       padding-left: 160px;
       padding-top: 130px;
     }
 
+    .slider-counter {
+      left: 60px;
+    }
+
     .swiper-pagination-bullets {
       left: unset;
-      right: 45px;
+      right: 40px;
     }
   }
 }
 
-@media (min-width: $desktopL) {
+@media (min-width: $desktop) {
   .hero-slider {
-    .swiper-slide__container {
-      padding-left: 210px;
-      padding-top: 220px;
-    }
-
     .swiper-pagination-bullets {
       left: unset;
       right: calc(50% - 640px);
     }
 
     .slider-counter {
-      top: 160px;
-      left: calc(50% - 625px);
-      display: block;
+      left: calc(50% - 615px);
     }
 
     .social-link__list {
-      left: calc(50% - 640px);
+      left: calc(50% - 630px);
     }
+  }
+}
+
+@media (min-width: $desktopM) {
+  .hero-slider {
+    .swiper-slide__container {
+      padding-top: 220px;
+    }
+
+    .slider-counter {
+      top: 160px;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktopL) {
+  .swiper-slide__container {
+    padding-left: 210px;
   }
 }
