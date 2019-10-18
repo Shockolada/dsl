@@ -79,6 +79,17 @@
     margin-bottom: 90px;
     padding-top: 60px;
     padding-bottom: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 110px;
+      bottom: -20px;
+      transform: translateX(-50%) rotate(45deg);
+      width: 40px;
+      height: 40px;
+      background-color: #3f4850;
+    }
   }
 
   .services__list {
@@ -124,6 +135,15 @@
   }
   .services__text {
     margin-bottom: 80px;
+  }
+}
+
+@media (min-width: $desktopM) {
+  .services__wrap {
+    &::before {
+      left: unset;
+      right: 72%;
+    }
   }
 }
 
